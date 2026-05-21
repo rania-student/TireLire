@@ -1,0 +1,192 @@
+/* Variables de couleurs - Thème Beige Épuré */
+:root {
+    --bg-color: #f7f4ef;          /* Beige très clair pour le fond */
+    --card-bg: #ffffff;           /* Blanc pur pour détacher les cartes */
+    --text-main: #3d352e;         /* Brun/charcoal très foncé pour le texte */
+    --text-muted: #8c8175;        /* Taupe doux pour les textes secondaires */
+    --accent-color: #d4a373;      /* Sable chaud pour les boutons et éléments clés */
+    --accent-hover: #b98f62;
+    --border-color: #e6dfd5;      /* Beige moyen pour les bordures discrètes */
+    
+    /* Couleurs des alertes */
+    --danger-bg: #fdf0ed;
+    --danger-text: #c94a29;
+    --success-bg: #edf7ed;
+    --success-text: #2e7d32;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 600px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.6rem;
+    font-weight: 400;
+    letter-spacing: -1px;
+    color: var(--text-main);
+    margin-bottom: 5px;
+}
+
+header p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Style des Cartes */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(61, 53, 46, 0.02);
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--text-main);
+}
+
+/* Formulaires */
+.input-group {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    background-color: #faf9f6;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text-main);
+    transition: all 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    background-color: #fff;
+}
+
+/* Boutons */
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+}
+
+.btn-secondary {
+    background-color: var(--text-main);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #26201b;
+}
+
+/* Dashboard Grid */
+.dashboard-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.dashboard-section .card {
+    margin-bottom: 0;
+    text-align: center;
+    padding: 20px;
+}
+
+.result-card h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.result-card p {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.result-card.highlighted {
+    background-color: #fffdf9;
+    border-color: #ecdcc9;
+}
+
+.result-card.highlighted p {
+    color: #b98f62;
+}
+
+/* Zone d'alerte */
+.alert-box {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.alert-box.danger {
+    background-color: var(--danger-bg);
+    color: var(--danger-text);
+    border: 1px solid #f5d6cf;
+}
+
+.alert-box.success {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+    border: 1px solid #d0e7d2;
+}
+
+.hidden {
+    display: none;
+}
